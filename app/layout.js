@@ -82,12 +82,6 @@ export default function RootLayout({ children }) {
         <link
           rel="icon"
           type="image/png"
-          sizes="32x32"
-          href="/icon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
           sizes="16x16"
           href="/icon-16x16.png"
         />

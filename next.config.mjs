@@ -91,5 +91,6 @@ export default withPWA({
   dest: "public", // destination directory for the PWA files
   disable: process.env.NODE_ENV === "development", // disable PWA in the development environment
   register: true, // register the PWA service worker
+  clientsClaim: true,    // makes the new SW take control of open tabs
   skipWaiting: true, // skip waiting for service worker activation
 })(nextConfig);
