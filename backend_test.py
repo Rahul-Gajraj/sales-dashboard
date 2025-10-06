@@ -13,7 +13,7 @@ from urllib.parse import urlparse, parse_qs
 
 class OAuthConfigTester:
     def __init__(self):
-        self.base_url = "https://salesrep-viewer.preview.emergentagent.com"
+        self.base_url = "https://squad.cronberry.com"
         self.api_base = f"{self.base_url}/api"
         self.test_results = []
         self.total_tests = 0
