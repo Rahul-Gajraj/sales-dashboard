@@ -1,5 +1,5 @@
-import NextAuth from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
 
 const handler = NextAuth({
   providers: [
@@ -12,18 +12,27 @@ const handler = NextAuth({
   callbacks: {
     async signIn({ user, account, profile }) {
       // Allow multiple Google Workspace domains
-      if (account?.provider === 'google') {
-        const email = user.email || '';
-        const allowedDomains = process.env.ALLOWED_GOOGLE_WORKSPACE_DOMAIN?.split(',').map(d => d.trim()) || ['maaruji.com', 'cronberry.com'];
-        
+      if (account?.provider === "google") {
+        const email = user.email || "";
+        const allowedDomains =
+          process.env.ALLOWED_GOOGLE_WORKSPACE_DOMAIN?.split(",").map((d) =>
+            d.trim()
+          ) || ["cronberry.com"];
+
         // Check if email domain is in allowed list
-        const isAllowed = allowedDomains.some(domain => email.endsWith(`@${domain}`));
-        
+        const isAllowed = allowedDomains.some((domain) =>
+          email.endsWith(`@${domain}`)
+        );
+
         if (!isAllowed) {
-          console.log(`Access denied for email: ${email}. Allowed domains: ${allowedDomains.join(', ')}`);
+          console.log(
+            `Access denied for email: ${email}. Allowed domains: ${allowedDomains.join(
+              ", "
+            )}`
+          );
           return false;
         }
-        
+
         console.log(`Access granted for email: ${email}`);
         return true;
       }
@@ -44,11 +53,11 @@ const handler = NextAuth({
     },
   },
   pages: {
-    signIn: '/',
-    error: '/auth/error',
+    signIn: "/",
+    error: "/auth/error",
   },
   session: {
-    strategy: 'jwt',
+    strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60, // 30 days
   },
   // Enable debug logging for production troubleshooting
