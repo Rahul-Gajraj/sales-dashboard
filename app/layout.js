@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { useState, useEffect } from "react";
-import Splash from "@/components/Splash";
+// import Splash from "@/components/Splash";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +23,7 @@ const metadata = {
   keywords: ["nextjs", "next14", "pwa", "next-pwa"],
   viewport:
     "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
-  icons: [
-    { rel: "apple-touch-icon", url: "icon-128.png" },
-    { rel: "icon", url: "icon-128.png" },
-  ],
+  icons: [{ rel: "apple-touch-icon", url: "apple-touch-icon.png" }],
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -79,13 +76,7 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#000000" />
 
-        <link
-          rel="apple-touch-startup-image"
-          href="/splash-512x512.png"
-          media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-        />
-
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
           rel="icon"
           type="image/png"
@@ -106,7 +97,7 @@ export default function RootLayout({ children }) {
           defaultTheme="light"
           enableSystem={false}
         >
-          <Splash />
+          {/* <Splash /> */}
           <QueryClientProvider client={queryClient}>
             <SessionProvider>
               <div className="relative">
