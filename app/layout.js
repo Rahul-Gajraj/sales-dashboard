@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={APP_DESCRIPTION} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#ffffff" />
 
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
