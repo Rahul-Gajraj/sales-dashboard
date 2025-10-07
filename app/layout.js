@@ -12,8 +12,8 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 // PWA metadata
-const APP_NAME = "Sales Rep Dashboard";
-const APP_DESCRIPTION = "PWA Sales Rep Dashboard for Performance Tracking";
+const APP_NAME = "Squad Games";
+const APP_DESCRIPTION = "PWA Squad Games for Performance Tracking";
 
 const metadata = {
   title: APP_NAME,

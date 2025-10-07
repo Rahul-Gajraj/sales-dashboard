@@ -71,7 +71,7 @@ const nextConfig = {
 
   // Environment variables that are safe to expose to client
   env: {
-    NEXT_PUBLIC_APP_NAME: "Sales Rep Dashboard",
+    NEXT_PUBLIC_APP_NAME: "Squad Games",
     NEXT_PUBLIC_APP_VERSION: "1.0.0",
   },
 
@@ -91,6 +91,6 @@ export default withPWA({
   dest: "public", // destination directory for the PWA files
   disable: process.env.NODE_ENV === "development", // disable PWA in the development environment
   register: true, // register the PWA service worker
-  clientsClaim: true,    // makes the new SW take control of open tabs
+  clientsClaim: true, // makes the new SW take control of open tabs
   skipWaiting: true, // skip waiting for service worker activation
 })(nextConfig);

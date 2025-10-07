@@ -29,9 +29,7 @@ export default function HomePage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <Card className="w-full max-w-md p-8 text-center space-y-6">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Sales Rep Dashboard
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900">Squad Games</h1>
           <p className="text-gray-600">
             Track your performance, view leaderboards, and stay motivated
           </p>

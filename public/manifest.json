@@ -1,7 +1,7 @@
 {
-  "name": "Sales Rep Dashboard",
-  "short_name": "SalesRep",
-  "description": "PWA Sales Rep Dashboard for Performance Tracking",
+  "name": "Squad Games",
+  "short_name": "Squad Games",
+  "description": "PWA Squad Games for Performance Tracking",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
