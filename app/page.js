@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="space-y-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <p className="text-sm text-blue-800">
-              <strong>@cronberry.com</strong> account only
+              <strong>Selected Cronberry</strong> Accounts Only
             </p>
           </div>
 
@@ -67,11 +67,6 @@ export default function HomePage() {
             </svg>
             Continue with Google
           </Button>
-        </div>
-
-        <div className="text-xs text-gray-500 space-y-1">
-          <p>PWA-enabled • Works offline</p>
-          <p>Install on your device for best experience</p>
         </div>
       </Card>
     </div>
